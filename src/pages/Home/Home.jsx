@@ -1,9 +1,9 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
-import { useLoaderData } from 'react-router';
-import TaskCard from '../../components/taskCard/taskCard';
+import { useLoaderData } from 'react-router'
 import HowItWorks from '../../components/HowItWorks/HowItWorks';
 import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
+import TaskCard from '../../components/TaskCard/TaskCard';
 
 
 
