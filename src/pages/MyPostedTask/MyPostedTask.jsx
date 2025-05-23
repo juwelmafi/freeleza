@@ -141,13 +141,13 @@ const MyPostedTask = () => {
             <tbody>
               {tasks.map((task, index) => (
                 <tr key={task._id}>
-                  <th>{index + 1}</th>
+                  <th className="text-xs md:text-sm">{index + 1}</th>
                   <td>
-                    <p className="font-semibold">{task?.taskName}</p>
-                    <p className="text-xs">Budget: ${task?.budget}</p>
+                    <p className="font-semibold text-xs md:text-sm">{task?.taskName}</p>
+                    <p className="text-[10px] md:text-xs">Budget: ${task?.budget}</p>
                   </td>
-                  <td>{task?.category}</td>
-                  <td>{formatDate(task?.deadline)}</td>
+                  <td className="text-xs md:text-sm">{task?.category}</td>
+                  <td className="text-xs md:text-sm">{formatDate(task?.deadline)}</td>
                   <td className="flex gap-2">
                     <button
                       onClick={() => handleUpdateButton(task._id)}
@@ -196,7 +196,7 @@ const MyPostedTask = () => {
 
       {/* Modal is here  */}
       <dialog id="my_modal_4" className="modal">
-        <div className="modal-box p-0 bg-[#88dee6]">
+        <div className="modal-box p-0 bg-[#88dee6] text-xs md:text-sm">
           <div className="text-[#04284B]">
             <div className="w-full mx-auto p-5 ">
               <form className="space-y-4" onSubmit={handleUpdateTask}>
@@ -341,7 +341,7 @@ const MyPostedTask = () => {
                 <div className="pt-4 flex flex-col gap-1">
                   <button
                     type="submit"
-                    className="text-white bg-[#04284B]  font-semibold py-2 px-4 rounded-lg hover:bg-[#222e39] transition"
+                    className="text-white bg-[#04284B]  font-semibold btn btn-sm md:btn-md rounded-lg hover:bg-[#222e39] transition"
                   >
                     Update
                   </button>
@@ -349,7 +349,7 @@ const MyPostedTask = () => {
               </form>
               <form method="dialog">
                 {/* if there is a button, it will close the modal */}
-                <button className="btn w-full rounded-lg mt-2">Close</button>
+                <button className="btn btn-sm md:btn-md w-full rounded-lg mt-2">Close</button>
               </form>
             </div>
           </div>
