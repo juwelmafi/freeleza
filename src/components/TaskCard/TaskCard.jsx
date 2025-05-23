@@ -25,7 +25,7 @@ const TaskCard = ({ task }) => {
             </div>
 
             <Link to={`/browse-tasks/${_id}`}>
-              <button className="btn border-none btn-sm lg:btn-md mt-2 w-full bg-[#04284B] text-white hover:bg-[#222e39] py-2 px-4 rounded-md transition">
+              <button className="btn btn-sm lg:btn-md mt-2 w-full border shadow-md border-gray-500 bg-[#04284B] text-white hover:bg-[#222e39] py-2 px-4 rounded-md transition">
                 View Task
               </button>
             </Link>

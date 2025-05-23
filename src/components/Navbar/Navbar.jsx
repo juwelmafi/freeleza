@@ -163,12 +163,12 @@ const Navbar = () => {
           ) : (
             <div className="flex gap-2">
               <Link to={"/login"}>
-                <button className="btn btn-sm lg:btn-md lg:p-4 lg:text-sm text-[10px] p-[8px]  bg-[#04284B] text-white hover:bg-[#222e39]">
+                <button className="btn btn-sm lg:btn-md lg:p-4 lg:text-sm text-[10px] p-[8px] border border-gray-500  bg-[#04284B] text-white hover:bg-[#222e39]">
                   Log in
                 </button>
               </Link>
               <Link to={"/signup"}>
-                <button className="btn btn-sm lg:btn-md lg:p-4 lg:text-sm text-[10px] p-[8px] bg-[#04284B] text-white hover:bg-[#222e39]">
+                <button className="btn btn-sm lg:btn-md lg:p-4 lg:text-sm text-[10px] p-[8px] border border-gray-500 bg-[#04284B] text-white hover:bg-[#222e39]">
                   Sign up
                 </button>
               </Link>
