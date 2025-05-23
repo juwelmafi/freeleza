@@ -30,10 +30,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="text-white">
               <div className="w-full pl-12 md:pl-0">
-                <h1 className=" md:mb-2 w-[70%] md:w-full text-2xl md:text-5xl font-bold">
-                  Post Your First Task — It's Free!
+                <h1 className=" md:mb-2 w-full md:w-full text-lg md:text-5xl font-bold">
+                  Post Your First Task, It's Free!
                 </h1>
-                <p className="text-xs md:text-sm mb-4">
+                <p className="text-xs md:text-sm mb-2">
                   Connect with top-rated freelancers in minutes.
                 </p>
                 <button className="btn btn-xs md:btn-sm px-3 text-xs md:text-sm bg-[#48CCDA] text-white border-0 shadow-none">
@@ -55,10 +55,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="text-white">
               <div className="w-full pl-12 md:pl-0">
-                <h1 className=" md:mb-2 w-[70%] md:w-full text-2xl md:text-5xl font-bold">
+                <h1 className=" md:mb-2 w-full md:w-full text-lg md:text-5xl font-bold">
                  Secure Payments, Every Time
                 </h1>
-                <p className="text-xs md:text-sm mb-4">
+                <p className="text-xs md:text-sm mb-2">
                   Trustworthy transactions with Firebase backend.
                 </p>
                 <button className="btn btn-xs md:btn-sm px-3 text-xs md:text-sm bg-[#48CCDA] text-white border-0 shadow-none">
@@ -80,10 +80,10 @@ const Banner = () => {
             <div className="hero-overlay"></div>
             <div className="text-white">
               <div className="w-full pl-12 md:pl-0">
-                <h1 className=" md:mb-2 w-[70%] md:w-full text-2xl md:text-5xl font-bold">
+                <h1 className=" md:mb-2 w-full md:w-full text-lg md:text-5xl font-bold">
                   Earn by Helping Others
                 </h1>
-                <p className="text-xs md:text-sm mb-4">
+                <p className="text-xs md:text-sm mb-2">
                   Freelancers can browse and bid on tasks easily.
                 </p>
                 <button className="btn btn-xs md:btn-sm px-3 text-xs md:text-sm bg-[#48CCDA] text-white border-0 shadow-none">

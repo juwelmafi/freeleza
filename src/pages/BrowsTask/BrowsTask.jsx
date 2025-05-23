@@ -49,9 +49,9 @@ const BrowsTask = () => {
                 <td className="space-x-2">
                   <Link to={`/browse-tasks/${task?._id}`}>
                   <button
-                    className="btn btn-xs px-2 bg-[#04284B] text-[8px] md:text-[10px] text-white hover:bg-[#222e39]"
+                    className="btn btn-sm bg-[#04284B] border border-gray-500 shadow-none text-[10px] md:text-xs text-white hover:bg-[#222e39]"
                   >
-                    View Details
+                    Details
                   </button>
                   </Link>
                 </td>
