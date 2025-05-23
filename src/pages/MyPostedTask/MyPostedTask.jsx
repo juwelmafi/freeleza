@@ -200,7 +200,7 @@ const MyPostedTask = () => {
           <div className="text-[#04284B]">
             <div className="w-full mx-auto p-5 ">
               <form className="space-y-4" onSubmit={handleUpdateTask}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-3">
                   <div className="col-span-2">
                     <label className="block mb-1 font-medium ">
                       Task Title
