@@ -79,7 +79,7 @@ const AddTask = () => {
               <label className="block mb-1 font-medium ">Deadline</label>
               <input
                 type="date"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white"
+                className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2"
                 name="deadline"
                 min={new Date().toISOString().split("T")[0]}
                 required
