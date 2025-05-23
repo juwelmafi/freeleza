@@ -5,6 +5,8 @@ import { AuthContext } from "../../providers/AuthPrivider";
 import { Popover } from "@headlessui/react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -95,7 +97,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link to={'/'}>
+          <Link to={"/"}>
             <img
               className="w-38"
               src={
@@ -142,24 +144,28 @@ const Navbar = () => {
           </label>
 
           {user ? (
-            <Popover className="relative">
-              <Popover.Button>
-                <img
-                  src={user?.photoURL}
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </Popover.Button>
+            <div>
+              <Popover className="relative">
+                <Popover.Button>
+                  <img
+                    src={user?.photoURL}
+                    className="w-10 h-10 rounded-full object-cover"
+                    data-tooltip-id="user-tooltip"
+                    data-tooltip-content={user?.displayName}
+                  />
+                  <Tooltip id="user-tooltip" place="left" />
+                </Popover.Button>
 
-              <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
-                <p className="font-semibold">{user?.displayName}</p>
-                <button
-                  onClick={handleLogOut}
-                  className=" btn btn-sm w-full mt-2 bg-[#04284B] text-white px-3 py-1 rounded"
-                >
-                  Logout
-                </button>
-              </Popover.Panel>
-            </Popover>
+                <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
+                  <button
+                    onClick={handleLogOut}
+                    className=" btn btn-sm w-full mt-2 bg-[#04284B] text-white px-3 py-1 rounded"
+                  >
+                    Logout
+                  </button>
+                </Popover.Panel>
+              </Popover>
+            </div>
           ) : (
             <div className="flex gap-2">
               <Link to={"/login"}>
