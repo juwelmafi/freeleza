@@ -129,7 +129,7 @@ const SignUp = () => {
               <p className="text-red-500">{errroMessage}</p>
               <button
                 type="submit"
-                className="btn bg-[#04284B] text-white mt-4 hover:bg-[#222e39]"
+                className="btn bg-[#04284B] text-white mt-4 hover:bg-[#222e39] border border-gray-500 shadow-none"
               >
                 Sign up
               </button>

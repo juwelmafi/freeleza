@@ -90,7 +90,7 @@ const LogIn = () => {
               <p className="text-red-500">{errroMessage}</p>
               <button
                 type="submit"
-                className="btn bg-[#04284B] text-white mt-2 hover:bg-[#222e39]"
+                className="btn shadow-none bg-[#04284B] text-white mt-2 hover:bg-[#222e39] border border-gray-500"
               >
                 Login
               </button>
