@@ -16,7 +16,7 @@ const TaskDetails = () => {
   };
 
   const handleUpdateBid = (newBids) => {
-    fetch(`http://localhost:4000/browse-tasks/${task._id}`, {
+    fetch(`https://freeleza-server.vercel.app/browse-tasks/${task._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

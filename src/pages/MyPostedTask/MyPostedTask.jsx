@@ -22,7 +22,7 @@ const MyPostedTask = () => {
   });
 
   const handleFetchSingleTask = async (id) => {
-    const res = await fetch(`http://localhost:4000/my-posted-task/${id}`);
+    const res = await fetch(`https://freeleza-server.vercel.app/my-posted-task/${id}`);
     const task = await res.json();
     setSingleTask(task);
     setFormInputs({
@@ -60,7 +60,7 @@ const MyPostedTask = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/my-posted-task/${id}`, {
+        fetch(`https://freeleza-server.vercel.app/my-posted-task/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -100,7 +100,7 @@ const MyPostedTask = () => {
 
     // update task to db //
 
-    fetch(`http://localhost:4000/my-posted-task/${singleTask._id}`, {
+    fetch(`https://freeleza-server.vercel.app/my-posted-task/${singleTask._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

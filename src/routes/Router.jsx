@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:4000/feature-task"),
+        loader: () => fetch("https://freeleza-server.vercel.app/feature-task"),
         hydrateFallbackElement: <Loading></Loading>,
         Component: Home,
       },
@@ -30,20 +30,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/browse-task",
-        loader: () => fetch("http://localhost:4000/tasks"),
+        loader: () => fetch("https://freeleza-server.vercel.app/tasks"),
         hydrateFallbackElement: <Loading></Loading>,
         Component: BrowsTask,
       },
       {
         path: "/browse-tasks/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/browse-tasks/${params.id}`),
+          fetch(`https://freeleza-server.vercel.app/browse-tasks/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>
       },
       {
         path: "/my-posted-task",
-        loader: () => fetch('http://localhost:4000/tasks'),
+        loader: () => fetch('https://freeleza-server.vercel.app/tasks'),
         hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoute><MyPostedTask></MyPostedTask></PrivateRoute>
       },

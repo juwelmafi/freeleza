@@ -18,7 +18,7 @@ const AddTask = () => {
     }
 
     // Add Data to DB //
-    fetch("http://localhost:4000/tasks", {
+    fetch("https://freeleza-server.vercel.app/tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
