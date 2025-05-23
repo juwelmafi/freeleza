@@ -6,7 +6,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="my-7 px-5">
+    <div className="md:my-7  md:px-5">
       <Swiper
         pagination={{
           dynamicBullets: true,
@@ -16,7 +16,7 @@ const Banner = () => {
           disableOnInteraction: false,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper rounded-lg"
+        className="mySwiper md:rounded-lg"
       >
         <SwiperSlide>
           {" "}
