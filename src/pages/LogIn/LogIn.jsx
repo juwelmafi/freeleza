@@ -71,10 +71,11 @@ const LogIn = () => {
                 </a>
               </div>
               <p className="text-red-500">{errroMessage}</p>
-              <button className="btn bg-[#04284B] text-white mt-2 hover:bg-[#222e39]">
+              <button type="submit" className="btn bg-[#04284B] text-white mt-2 hover:bg-[#222e39]">
                 Login
               </button>
               <button
+              type="button"
                 className="btn bg-white text-black border-[#e5e5e5]"
                 onClick={handleGoogleLogIn}
               >

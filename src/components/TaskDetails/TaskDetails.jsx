@@ -36,7 +36,7 @@ const TaskDetails = () => {
   };
 
   return (
-    <div className="px-2 md:px-0">
+    <div className="px-2 md:px-0 mb-22">
       <div className="flex justify-center items-center my-5">
         <span className="font-semibold text-center mt-5 bg-purple-100 text-purple-700 px-4 border border-purple-700 mx-auto p-2 rounded-3xl">
           You bid for {bids} opportunities.
@@ -60,30 +60,30 @@ const TaskDetails = () => {
           </button>
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-800 my-4 ">
+        <h2 className="text-xl md:text-3xl font-bold text-gray-800 my-4 ">
           {task?.taskName}
         </h2>
 
         <div className="space-y-3 text-gray-700">
-          <p>
-            <span className="font-semibold">Category:</span> {task?.category}
+          <p className="text-sm">
+            <span className="font-bold text-sm">Category:</span> {task?.category}
           </p>
-          <p>
-            <span className="font-semibold">Deadline:</span>{" "}
+          <p className="text-sm">
+            <span className="font-bold text-sm">Deadline:</span>{" "}
             {formatDate(task?.deadline)}
           </p>
-          <p>
-            <span className="font-semibold">Budget:</span> ${task?.budget}
+          <p className="text-sm">
+            <span className="font-bold text-sm">Budget:</span> ${task?.budget}
           </p>
-          <p>
-            <span className="font-semibold">Posted By:</span> {task?.userName}
+          <p className="text-sm">
+            <span className="font-bold text-sm">Posted By:</span> {task?.userName}
           </p>
-          <p>
-            <span className="font-semibold">Contact:</span> {task?.userEmail}
+          <p className="text-sm">
+            <span className="font-bold text-sm">Contact:</span> {task?.userEmail}
           </p>
           <div>
-            <p className="font-semibold mb-1">Description:</p>
-            <p className="bg-gray-100 p-4 rounded">{task?.description}</p>
+            <p className="font-bold text-sm mb-1">Description:</p>
+            <p className="bg-gray-100 text-sm p-4 rounded">{task?.description}</p>
           </div>
         </div>
       </div>

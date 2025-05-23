@@ -76,9 +76,7 @@ const SignUp = () => {
       <div className="hero-content w-full">
         <div className="card bg-base-100 max-w-sm w-full shrink-0 shadow-2xl">
           <div className="card-body">
-            <h2 className=" font-bold text-2xl text-center">
-              Sign up now!
-            </h2>
+            <h2 className=" font-bold text-2xl text-center">Sign up now!</h2>
             <form className="fieldset" onSubmit={handleSignUp}>
               <label className="label ">Name</label>
               <input
@@ -109,10 +107,14 @@ const SignUp = () => {
                 name="password"
               />
               <p className="text-red-500">{errroMessage}</p>
-              <button className="btn bg-[#04284B] text-white mt-4 hover:bg-[#222e39]">
+              <button
+                type="submit"
+                className="btn bg-[#04284B] text-white mt-4 hover:bg-[#222e39]"
+              >
                 Sign up
               </button>
               <button
+                type="button"
                 className="btn bg-white text-black border-[#e5e5e5]"
                 onClick={handleGoogleLogIn}
               >
