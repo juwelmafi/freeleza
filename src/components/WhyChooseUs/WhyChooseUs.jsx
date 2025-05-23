@@ -1,8 +1,9 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const WhyChooseUs = () => {
   return (
-    <div>
+    <Fade>
       <section className="m-4 md:m-8 dark:bg-gray-100 dark:text-gray-800">
         <div className="container p-4 mx-auto my-6 space-y-1 text-center"> 
           <h2 className="font-bold text-xl lg:text-3xl text-center my-2 lg:my-5 dark:text-white">
@@ -119,7 +120,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Fade>
   );
 };
 
