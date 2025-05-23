@@ -21,7 +21,7 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[70vh] lg:min-h-[80vh]"
+            className=" hero h-[200px] md:h-[400px] lg:h-[450px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/KckCg60t/IMG-20250523-120054.jpg)",
@@ -46,7 +46,7 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[70vh] lg:min-h-[80vh]"
+            className=" hero h-[200px] md:h-[400px] lg:h-[450px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/8ghVxdJH/IMG-20250523-120126.jpg)",
@@ -71,7 +71,7 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[70vh] lg:min-h-[80vh]"
+            className=" hero h-[200px] md:h-[400px] lg:h-[450px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/mCSL4gC5/IMG-20250523-120111.jpg)",
