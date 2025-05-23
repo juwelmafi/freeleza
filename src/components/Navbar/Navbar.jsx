@@ -144,28 +144,31 @@ const Navbar = () => {
           </label>
 
           {user ? (
-            <div>
-              <Popover className="relative">
-                <Popover.Button>
-                  <img
-                    src={user?.photoURL}
-                    className="w-10 h-10 rounded-full object-cover"
-                    data-tooltip-id="user-tooltip"
-                    data-tooltip-content={user?.displayName}
-                  />
-                  <Tooltip id="user-tooltip" place="left" />
-                </Popover.Button>
+            <Popover className="relative">
+              <Popover.Button>
+                <img
+                  src={user?.photoURL}
+                  className="w-10 h-10 rounded-full object-cover cursor-pointer"
+                />
+              </Popover.Button>
 
-                <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
-                  <button
-                    onClick={handleLogOut}
-                    className=" btn btn-sm w-full mt-2 bg-[#04284B] text-white px-3 py-1 rounded"
-                  >
-                    Logout
-                  </button>
-                </Popover.Panel>
-              </Popover>
-            </div>
+              <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
+                <p
+                  className="font-semibold bg-green-100  text-green-500 px-2 py-1 rounded-2xl text-center cursor-default"
+                  data-tooltip-id="user-tooltip"
+                  data-tooltip-content={user?.email}
+                >
+                  {user?.displayName}
+                </p>
+                <Tooltip id="user-tooltip" place="left" />
+                <button
+                  onClick={handleLogOut}
+                  className=" btn btn-sm w-full mt-2 bg-[#04284B] text-white px-3 py-1 rounded"
+                >
+                  Logout
+                </button>
+              </Popover.Panel>
+            </Popover>
           ) : (
             <div className="flex gap-2">
               <Link to={"/login"}>
