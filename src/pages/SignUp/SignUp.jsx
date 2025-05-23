@@ -2,11 +2,13 @@ import { React, useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthPrivider";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const SignUp = () => {
   const { registerUser, setUser, updateUser, googleLogin } =
     useContext(AuthContext);
   const [errroMessage, setErrorMessage] = useState("");
+  const [showPass, setShowPass] = useState(false);
 
   const navigate = useNavigate();
 
@@ -100,12 +102,30 @@ const SignUp = () => {
                 name="email"
               />
               <label className="label ">Password</label>
-              <input
-                type="password"
-                className="input"
-                placeholder="Password"
-                name="password"
-              />
+              <div className="relative">
+                <input
+                  type={`${showPass ? "text" : "password"}`}
+                  className="input"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPass(!showPass)}
+                  className="absolute top-3 right-3 md:right-6"
+                >
+                  {" "}
+                  {showPass ? (
+                    <FaEyeSlash
+                      size={18}
+                      className="text-gray-500"
+                    ></FaEyeSlash>
+                  ) : (
+                    <FaEye size={18} className="text-gray-500"></FaEye>
+                  )}
+                </button>
+              </div>
               <p className="text-red-500">{errroMessage}</p>
               <button
                 type="submit"
