@@ -34,11 +34,11 @@ const AddTask = () => {
       });
   };
   return (
-    <div className="my-10">
+    <div className="my-10 px-1 text-xs md:text-sm">
       <h2 className="text-2xl font-bold text-center mb-6">Add New Task</h2>
       <div className="max-w-2xl mx-auto p-6 bg-[#88dee6] text-black  border-gray-200 rounded-lg shadow-md mt-10">
         <form className="space-y-4" onSubmit={handleAddTask}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
             <div className="col-span-2">
               <label className="block mb-1 font-medium ">Task Title</label>
               <input

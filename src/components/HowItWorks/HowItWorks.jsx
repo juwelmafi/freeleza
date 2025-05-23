@@ -40,7 +40,7 @@ const HowItWorks = () => {
               <span className="text-sm lg:text-lg font-bold">3.</span>
               <div>
                 <h3 className="text-sm lg:text-lg font-semibold">
-                  Hire a Ereealancer
+                  Hire a Freelancer
                 </h3>
                 <p className="text-gray-400 text-xs lg:text-sm">
                   Wooo, hire a freelancer to complete your task on best quality!

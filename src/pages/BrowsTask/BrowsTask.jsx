@@ -13,7 +13,7 @@ const BrowsTask = () => {
           <thead>
             <tr>
               <th>Serial No.</th>
-              <th>Name</th>
+              <th>Posted By</th>
               <th>Posted Task</th>
               <th>Budget</th>
               <th>More Info</th>
@@ -23,7 +23,7 @@ const BrowsTask = () => {
             {tasks.map((task, index) => (
               <tr key={task?._id}>
                 <td>
-                  <p className="font-bold">{index + 1}</p>
+                  <p className="font-bold text-xs md:text-sm">{index + 1}</p>
                 </td>
                 <td>
                   <div className="flex items-center gap-3">
@@ -36,20 +36,20 @@ const BrowsTask = () => {
                       </div>
                     </div>
                     <div>
-                      <div className="font-bold">{task?.userName}</div>
+                      <div className="font-bold text-xs md:text-sm">{task?.userName}</div>
                     </div>
                   </div>
                 </td>
                 <td>
-                  <p className="font-semibold">{task?.taskName}</p>
+                  <p className="font-semibold text-xs md:text-sm">{task?.taskName}</p>
                 </td>
                 <td>
-                  <span className="font-semibold">Budget: ${task?.budget}</span>
+                  <span className="font-semibold text-xs md:text-sm">Budget: ${task?.budget}</span>
                 </td>
                 <td className="space-x-2">
                   <Link to={`/browse-tasks/${task?._id}`}>
                   <button
-                    className="btn btn-xs bg-[#04284B] text-white hover:bg-[#222e39]"
+                    className="btn btn-xs bg-[#04284B] text-[8px] text-white hover:bg-[#222e39]"
                   >
                     View Details
                   </button>
