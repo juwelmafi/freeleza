@@ -21,10 +21,10 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[75vh]"
+            className=" hero min-h-[30vh] md:min-h-[80vh]"
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/fzpd7gHr/pexels-photo-56759.jpg)",
+                "url(https://i.ibb.co/KckCg60t/IMG-20250523-120054.jpg)",
             }}
           >
             <div className="hero-overlay"></div>
@@ -46,10 +46,10 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[75vh]"
+            className=" hero min-h-[30vh] md:min-h-[80vh]"
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/Rp4YX66w/7-Freelance-Payment-Methods-To-Ease-Your-Life-In-2022.jpg)",
+                "url(https://i.ibb.co/8ghVxdJH/IMG-20250523-120126.jpg)",
             }}
           >
             <div className="hero-overlay"></div>
@@ -71,10 +71,10 @@ const Banner = () => {
         <SwiperSlide>
           {" "}
           <div
-            className=" hero min-h-[30vh] md:min-h-[75vh]"
+            className=" hero min-h-[30vh] md:min-h-[80vh]"
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/rRVtjHgJ/istockphoto-1363105039-612x612.jpg",
+                "url(https://i.ibb.co/mCSL4gC5/IMG-20250523-120111.jpg)",
             }}
           >
             <div className="hero-overlay"></div>
