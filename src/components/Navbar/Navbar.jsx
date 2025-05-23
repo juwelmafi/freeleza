@@ -154,7 +154,7 @@ const Navbar = () => {
 
               <Popover.Panel className="absolute z-10 mt-1 -ml-36 w-48 bg-base-100 border border-gray-300 rounded shadow p-4">
                 <p
-                  className="font-semibold bg-green-100  text-green-500 px-2 py-1 rounded-2xl text-center cursor-default"
+                  className="font-semibold text-xs md:text-sm bg-green-100  text-green-500 px-2 py-1 rounded-2xl text-center cursor-default"
                   data-tooltip-id="user-tooltip"
                   data-tooltip-content={user?.email}
                 >
