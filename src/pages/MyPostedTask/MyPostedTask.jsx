@@ -22,7 +22,9 @@ const MyPostedTask = () => {
   });
 
   const handleFetchSingleTask = async (id) => {
-    const res = await fetch(`https://freeleza-server.vercel.app/my-posted-task/${id}`);
+    const res = await fetch(
+      `https://freeleza-server.vercel.app/my-posted-task/${id}`
+    );
     const task = await res.json();
     setSingleTask(task);
     setFormInputs({
@@ -100,13 +102,16 @@ const MyPostedTask = () => {
 
     // update task to db //
 
-    fetch(`https://freeleza-server.vercel.app/my-posted-task/${singleTask._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedTask),
-    })
+    fetch(
+      `https://freeleza-server.vercel.app/my-posted-task/${singleTask._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedTask),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         // console.log("data from db", data);
@@ -122,6 +127,14 @@ const MyPostedTask = () => {
         // e.target.reset();
       });
   };
+
+  useEffect(() => {
+    document.title = `My Posted Task | Freeleza`;
+    window.scroll(0, 0);
+    return () => {
+      document.title = "Freeleza";
+    };
+  }, []);
 
   return (
     <div>
@@ -143,11 +156,17 @@ const MyPostedTask = () => {
                 <tr key={task._id}>
                   <th className="text-xs md:text-sm">{index + 1}</th>
                   <td>
-                    <p className="font-semibold text-xs md:text-sm">{task?.taskName}</p>
-                    <p className="text-[10px] md:text-xs">Budget: ${task?.budget}</p>
+                    <p className="font-semibold text-xs md:text-sm">
+                      {task?.taskName}
+                    </p>
+                    <p className="text-[10px] md:text-xs">
+                      Budget: ${task?.budget}
+                    </p>
                   </td>
                   <td className="text-xs md:text-sm">{task?.category}</td>
-                  <td className="text-xs md:text-sm">{formatDate(task?.deadline)}</td>
+                  <td className="text-xs md:text-sm">
+                    {formatDate(task?.deadline)}
+                  </td>
                   <td className="flex gap-2">
                     <button
                       onClick={() => handleUpdateButton(task._id)}
@@ -349,7 +368,9 @@ const MyPostedTask = () => {
               </form>
               <form method="dialog">
                 {/* if there is a button, it will close the modal */}
-                <button className="btn btn-sm md:btn-md w-full rounded-lg mt-2">Close</button>
+                <button className="btn btn-sm md:btn-md w-full rounded-lg mt-2">
+                  Close
+                </button>
               </form>
             </div>
           </div>

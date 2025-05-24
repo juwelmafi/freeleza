@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthPrivider";
 import toast from "react-hot-toast";
@@ -45,6 +45,15 @@ const LogIn = () => {
         setErrorMessage(error.code);
       });
   };
+
+  useEffect(() => {
+    document.title = `Log in | Freeleza`;
+    window.scroll(0, 0);
+    return () => {
+      document.title = "Freeleza";
+    };
+  }, []);
+
   return (
     <div className="hero min-h-[90vh] w-full">
       <div className="hero-content w-full">

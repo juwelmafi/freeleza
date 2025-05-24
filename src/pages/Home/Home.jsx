@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../../components/Banner/Banner";
 import { useLoaderData } from "react-router";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
@@ -8,6 +8,14 @@ import TaskCard from "../../components/TaskCard/TaskCard";
 const Home = () => {
   const featureTask = useLoaderData();
   console.log(featureTask);
+
+  useEffect(() => {
+    document.title = `Home | Freeleza`;
+    return () => {
+      document.title = "Freeleza";
+    };
+  }, []);
+
   return (
     <div>
       <div>

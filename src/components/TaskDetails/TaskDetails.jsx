@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useNavigate } from "react-router";
 import { formatDate } from "../FormateDate";
 import toast from "react-hot-toast";
@@ -35,6 +35,15 @@ const TaskDetails = () => {
       });
   };
 
+  useEffect(() => {
+    document.title = `${task?.taskName} | Freeleza`;
+    window.scroll(0, 0);
+    return () => {
+      document.title = "Freeleza";
+    };
+  }, [task?.taskName]);
+
+
   return (
     <div className="px-2 md:px-0 mb-22">
       <div className="flex justify-center items-center my-5">
@@ -66,7 +75,8 @@ const TaskDetails = () => {
 
         <div className="space-y-3 text-gray-700">
           <p className="text-sm">
-            <span className="font-bold text-sm">Category:</span> {task?.category}
+            <span className="font-bold text-sm">Category:</span>{" "}
+            {task?.category}
           </p>
           <p className="text-sm">
             <span className="font-bold text-sm">Deadline:</span>{" "}
@@ -76,14 +86,18 @@ const TaskDetails = () => {
             <span className="font-bold text-sm">Budget:</span> ${task?.budget}
           </p>
           <p className="text-sm">
-            <span className="font-bold text-sm">Posted By:</span> {task?.userName}
+            <span className="font-bold text-sm">Posted By:</span>{" "}
+            {task?.userName}
           </p>
           <p className="text-sm">
-            <span className="font-bold text-sm">Contact:</span> {task?.userEmail}
+            <span className="font-bold text-sm">Contact:</span>{" "}
+            {task?.userEmail}
           </p>
           <div>
             <p className="font-bold text-sm mb-1">Description:</p>
-            <p className="bg-gray-100 text-sm p-4 rounded">{task?.description}</p>
+            <p className="bg-gray-100 text-sm p-4 rounded">
+              {task?.description}
+            </p>
           </div>
         </div>
       </div>

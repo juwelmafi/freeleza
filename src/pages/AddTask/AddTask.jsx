@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../../providers/AuthPrivider";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
@@ -33,6 +33,15 @@ const AddTask = () => {
         // e.reset();
       });
   };
+
+  useEffect(() => {
+    document.title = `Add Task | Freeleza`;
+    window.scroll(0, 0);
+    return () => {
+      document.title = "Freeleza";
+    };
+  }, []);
+
   return (
     <div className="my-10 px-1 text-xs md:text-sm">
       <h2 className="text-2xl font-bold text-center mb-6">Add New Task</h2>
