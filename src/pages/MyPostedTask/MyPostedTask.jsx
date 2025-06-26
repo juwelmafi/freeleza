@@ -137,7 +137,7 @@ const MyPostedTask = () => {
   }, []);
 
   return (
-    <div>
+    <div className="mt-[67px]">
       {tasks.length > 0 ? (
         <div className="overflow-x-auto my-10 rounded-box border border-base-content/5 bg-base-100">
           <table className="table">

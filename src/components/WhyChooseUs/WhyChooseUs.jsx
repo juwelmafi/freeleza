@@ -1,5 +1,6 @@
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
+import { Link } from "react-router";
 
 const WhyChooseUs = () => {
   return (
@@ -25,9 +26,9 @@ const WhyChooseUs = () => {
               ensuring your funds and payment details are always safe from fraud
               and unauthorized access.
             </p>
-            <a
+            <Link
               className="inline-flex items-center space-x-2 text-xs lg:text-sm "
-              href="/components"
+              to={"/no-content"}
             >
               <span>Learn More</span>
               <svg
@@ -42,7 +43,7 @@ const WhyChooseUs = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col px-8 py-6 rounded-md border border-gray-200">
             <h2 className="mb-2 text-sm  font-semibold sm:text-lg title-font ">
@@ -53,9 +54,9 @@ const WhyChooseUs = () => {
               so you collaborate only with qualified, reliable freelancers who
               deliver top-quality results.
             </p>
-            <a
+            <Link
               className="inline-flex items-center space-x-2 text-xs lg:text-sm "
-              href="/sections"
+              to={"/no-content"}
             >
               <span>Learn More</span>
               <svg
@@ -70,7 +71,7 @@ const WhyChooseUs = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col px-8 py-6 rounded-md border border-gray-200">
             <h2 className="mb-2 text-sm  font-semibold sm:text-lg title-font ">
@@ -81,9 +82,9 @@ const WhyChooseUs = () => {
               weekend, our dedicated support team is always available to assist
               you.
             </p>
-            <a
+            <Link
               className="inline-flex items-center space-x-2 text-xs lg:text-sm "
-              href="/templates"
+              to={"/no-content"}
             >
               <span>Learn More</span>
               <svg
@@ -98,7 +99,7 @@ const WhyChooseUs = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col px-8 py-6 rounded-md border border-gray-200">
             <h2 className="mb-2 text-sm  font-semibold sm:text-lg title-font ">
@@ -108,9 +109,9 @@ const WhyChooseUs = () => {
               We stand by our service: if you’re not happy with the work you
               receive, we’ll help you refine it or issue a full refund.
             </p>
-            <a
+            <Link
               className="inline-flex items-center space-x-2 text-xs lg:text-sm "
-              href="/docs"
+              to={"/no-content"}
             >
               <span>Learn More</span>
               <svg
@@ -125,7 +126,7 @@ const WhyChooseUs = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

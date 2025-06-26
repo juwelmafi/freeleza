@@ -41,12 +41,17 @@ const Navbar = () => {
       <li>
         <NavLink to={"/browse-task"}>Browse Task</NavLink>
       </li>
-      <li>
-        <NavLink to={"/add-task"}>Add Task</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/my-posted-task"}>My Posted Task</NavLink>
-      </li>
+
+      {user && (
+        <li>
+          <NavLink to={"/add-task"}>Add Task</NavLink>
+        </li>
+      )}
+      {user && (
+        <li>
+          <NavLink to={"/my-posted-task"}>My Posted Task</NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -69,7 +74,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-base-100 shadow-sm">
+    <div className="w-full bg-base-100 shadow-sm fixed z-10 top-0">
       <div className="navbar  max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

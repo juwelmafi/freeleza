@@ -11,6 +11,10 @@ import Loading from "../components/Loading/Loading";
 import TaskDetails from "../components/TaskDetails/TaskDetails";
 import PrivateRoute from "../providers/PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import TaskByCat from "../pages/TaskByCat/TaskByCat";
+import NoContent from "../pages/ErrorPage/NoContent";
+import BlogDetails from "../pages/BlogDetails/BlogDetails";
+import BlogPage from "../pages/allBlogs/BlogPage";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +39,10 @@ const router = createBrowserRouter([
         Component: BrowsTask,
       },
       {
+        path: "/browse-task/:category",
+        Component: TaskByCat
+      },
+      {
         path: "/browse-tasks/:id",
         loader: ({ params }) =>
           fetch(`https://freeleza-server.vercel.app/browse-tasks/${params.id}`),
@@ -55,6 +63,18 @@ const router = createBrowserRouter([
         path: "/signup",
         Component: SignUp,
       },
+      {
+        path: "/no-content",
+        Component: NoContent
+      },
+      {
+        path: "/blogs/:id",
+        Component: BlogDetails,
+      },
+      {
+        path: "/blogs",
+        Component: BlogPage,
+      }
     ],
   },
 ]);

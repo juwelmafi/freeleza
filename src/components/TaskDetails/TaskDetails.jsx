@@ -45,7 +45,7 @@ const TaskDetails = () => {
 
 
   return (
-    <div className="px-2 md:px-0 mb-22">
+    <div className="px-2 md:px-0 mb-22 mt-[67px]">
       <div className="flex justify-center items-center my-5">
         <span className="font-semibold text-center mt-5 bg-purple-100 text-purple-700 px-4 border border-purple-700 mx-auto p-2 rounded-3xl">
           You bid for {bids} opportunities.

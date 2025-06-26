@@ -4,6 +4,9 @@ import { useLoaderData } from "react-router";
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import WhyChooseUs from "../../components/WhyChooseUs/WhyChooseUs";
 import TaskCard from "../../components/TaskCard/TaskCard";
+import Categories from "../../components/Categories/Categories";
+import HomeBlogPreview from "../../components/Blogs/HomeBlogPreview";
+
 
 const Home = () => {
   const featureTask = useLoaderData();
@@ -21,7 +24,7 @@ const Home = () => {
       <div>
         <Banner></Banner>
       </div>
-      <main className="">
+      <main className="max-w-7xl mx-auto">
         {/* Feature task Section  */}
         <section>
           <h2 className="font-bold text-xl lg:text-3xl text-center mt-5 md:mt-10">
@@ -38,6 +41,13 @@ const Home = () => {
             ))}
           </div>
         </section>
+
+        {/* Show task by categories  */}
+
+        <section>
+          <Categories></Categories>
+        </section>
+
         {/* How It Work Section  */}
 
         <section>
@@ -47,6 +57,12 @@ const Home = () => {
         {/* Our Developer Task */}
         <section className="mb-20">
           <WhyChooseUs></WhyChooseUs>
+        </section>
+
+        {/* Blogs section  */}
+
+        <section>
+          <HomeBlogPreview></HomeBlogPreview>
         </section>
       </main>
     </div>

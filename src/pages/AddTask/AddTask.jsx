@@ -43,7 +43,7 @@ const AddTask = () => {
   }, []);
 
   return (
-    <div className="my-10 px-1 text-xs md:text-sm">
+    <div className="my-10 px-1 text-xs md:text-sm mt-24">
       <h2 className="text-2xl font-bold text-center mb-6">Add New Task</h2>
       <div className="max-w-2xl mx-auto p-6 bg-[#88dee6] text-black  border-gray-200 rounded-lg shadow-md mt-10">
         <form className="space-y-4" onSubmit={handleAddTask}>
@@ -82,6 +82,7 @@ const AddTask = () => {
                 <option value="Content Writing">Content Writing</option>
                 <option value="Digital Marketing">Digital Marketing</option>
                 <option value="App Development">App Development</option>
+                <option value="Cyber Security">Cyber Security</option>
               </select>
             </div>
             <div>
