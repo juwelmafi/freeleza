@@ -15,7 +15,7 @@ const HomeBlogPreview = () => {
   return (
     <div className="max-w-6xl mx-auto py-10 px-4">
       <h2 className="md:text-3xl text-xl  font-bold mb-6">Latest Freelancing Blogs</h2>
-      <div className="grid gap-6 md:grid-cols-4">
+      <div className="grid gap-6 lg:grid-cols-4 grid-cols-1">
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}

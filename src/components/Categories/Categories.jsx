@@ -17,7 +17,7 @@ const Categories = () => {
   );
 
   return (
-    <div className="my-10">
+    <div className="my-10 px-5 lg:px-0">
       <h2 className="font-bold text-xl lg:text-3xl text-center mt-5 md:mt-10">
         Find Task By Categories
       </h2>

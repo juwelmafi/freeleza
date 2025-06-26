@@ -15,6 +15,8 @@ import TaskByCat from "../pages/TaskByCat/TaskByCat";
 import NoContent from "../pages/ErrorPage/NoContent";
 import BlogDetails from "../pages/BlogDetails/BlogDetails";
 import BlogPage from "../pages/allBlogs/BlogPage";
+import DashBoard from "../layouts/DashBoard";
+import DhashBoardHome from "../pages/DashBoardPages/DhashBoardHome";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +30,7 @@ const router = createBrowserRouter([
         hydrateFallbackElement: <Loading></Loading>,
         Component: Home,
       },
-      {
-        path: "/add-task",
-        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>
-      },
+      
       {
         path: "/browse-task",
         loader: () => fetch("https://freeleza-server.vercel.app/tasks"),
@@ -49,12 +48,8 @@ const router = createBrowserRouter([
         hydrateFallbackElement: <Loading></Loading>,
         element: <PrivateRoute><TaskDetails></TaskDetails></PrivateRoute>
       },
-      {
-        path: "/my-posted-task",
-        loader: () => fetch('https://freeleza-server.vercel.app/tasks'),
-        hydrateFallbackElement: <Loading></Loading>,
-        element: <PrivateRoute><MyPostedTask></MyPostedTask></PrivateRoute>
-      },
+      
+      
       {
         path: "/login",
         Component: LogIn,
@@ -73,10 +68,34 @@ const router = createBrowserRouter([
       },
       {
         path: "/blogs",
+        loader: ()=> fetch("https://dev.to/api/articles?tag=freelance&per_page=20"),
+        hydrateFallbackElement: <Loading></Loading>,
         Component: BlogPage,
       }
     ],
   },
+  {
+    path: "/",
+    Component: DashBoard,
+    children: [
+      {
+        path: "/dashboard",
+        loader: () => fetch("https://freeleza-server.vercel.app/tasks"),
+        hydrateFallbackElement: <Loading></Loading>,
+        Component: DhashBoardHome,
+      },
+      {
+        path: "/my-posted-task",
+        loader: () => fetch('https://freeleza-server.vercel.app/tasks'),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <PrivateRoute><MyPostedTask></MyPostedTask></PrivateRoute>
+      },
+      {
+        path: "/add-task",
+        element: <PrivateRoute><AddTask></AddTask></PrivateRoute>
+      },
+    ]
+  }
 ]);
 
 export default router;
