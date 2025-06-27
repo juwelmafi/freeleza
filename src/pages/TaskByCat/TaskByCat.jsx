@@ -31,7 +31,7 @@ const TaskByCat = () => {
 
 
   return (
-    <div className=" my-10 md:mt-28  max-w-7xl mx-auto">
+    <div className=" my-10 mt-28  max-w-7xl mx-auto">
       <h2 className="font-bold text-xl lg:text-3xl text-center mt-5 md:mt-10">
         All {formatted} Related Task.
       </h2>

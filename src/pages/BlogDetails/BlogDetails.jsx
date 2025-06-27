@@ -13,6 +13,15 @@ const BlogDetails = () => {
       .then((data) => setBlog(data));
   }, [id]);
 
+  useEffect(() => {
+      document.title = `Blog Details | Freeleza`;
+      window.scroll(0, 0)
+      return () => {
+        document.title = "Freeleza";
+      };
+    }, []);
+
+
   if (!blog) return <Loading></Loading>
 
   return (

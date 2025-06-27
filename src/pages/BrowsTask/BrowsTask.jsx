@@ -36,7 +36,7 @@ const BrowsTask = () => {
 
   return (
     <div className="max-w-7xl mx-auto mt-[67px]">
-      <div className="flex flex-col mt-20 md:flex-row justify-between mb-4 gap-2">
+      <div className="flex px-5 md:px-0 flex-col mt-20 md:flex-row justify-between mb-4 gap-2">
         <input
           type="text"
           placeholder="🔍 Search by category"

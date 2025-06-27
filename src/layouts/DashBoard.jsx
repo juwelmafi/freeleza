@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 import DashNav from "../components/DashBoardComp/DashNav";
@@ -6,6 +6,14 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 const DashBoard = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+      document.title = `Dashboard | Freeleza`;
+      return () => {
+        document.title = "Freeleza";
+      };
+    }, []);
+
   return (
     <div className="">
       <div className="flex max-w-7xl mx-auto">

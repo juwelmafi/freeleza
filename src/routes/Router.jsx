@@ -17,6 +17,9 @@ import BlogDetails from "../pages/BlogDetails/BlogDetails";
 import BlogPage from "../pages/allBlogs/BlogPage";
 import DashBoard from "../layouts/DashBoard";
 import DhashBoardHome from "../pages/DashBoardPages/DhashBoardHome";
+import FaQ from "../pages/HelpSupport/FaQ/FaQ";
+import HelpSupport from "../pages/HelpSupport/HelpSupport";
+;
 
 const router = createBrowserRouter([
   {
@@ -71,6 +74,10 @@ const router = createBrowserRouter([
         loader: ()=> fetch("https://dev.to/api/articles?tag=freelance&per_page=20"),
         hydrateFallbackElement: <Loading></Loading>,
         Component: BlogPage,
+      },
+      {
+        path:"/help-support",
+        Component: HelpSupport,
       }
     ],
   },
