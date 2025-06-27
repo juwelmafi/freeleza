@@ -27,9 +27,9 @@ const TopCards = ({ tasks }) => {
   return (
     <div className="space-y-6 mt-10">
       {/* Top Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-5 gap-4">
         {/* Used Space */}
-        <div className=" shadow-lg p-4 rounded-xl">
+        <div className=" shadow-lg p-4 border border-gray-200 rounded-xl">
           <div className="flex items-center justify-between">
             <div className="text-orange-500 text-2xl">
               <FaTasks />
@@ -39,13 +39,13 @@ const TopCards = ({ tasks }) => {
               <h3 className="text-lg font-bold">{tasks?.length}</h3>
             </div>
           </div>
-          <Link to={"/browse-task"} className="text-xs text-orange-500 mt-2">
+          <Link to={"/browse-task"} className="text-xs  text-orange-500 mt-2">
             ⚠ Browse the tasks...
           </Link>
         </div>
 
         {/* Revenue */}
-        <div className=" shadow-lg p-4 rounded-xl">
+        <div className=" shadow-lg p-4 rounded-xl border border-gray-200">
           <div className="flex items-center justify-between">
             <div className="text-green-500 text-2xl">
               <Fa42Group />
@@ -61,7 +61,7 @@ const TopCards = ({ tasks }) => {
         </div>
 
         {/* Fixed Issues */}
-        <div className=" shadow-lg p-4 rounded-xl">
+        <div className=" shadow-lg p-4 rounded-xl border border-gray-200">
           <div className="flex items-center justify-between">
             <div className="text-red-500 text-2xl">
               <FaDollarSign />
@@ -75,7 +75,7 @@ const TopCards = ({ tasks }) => {
         </div>
 
         {/* Followers */}
-        <div className=" shadow-lg p-4 rounded-xl">
+        <div className=" shadow-lg p-4 rounded-xl border border-gray-200">
           <div className="flex items-center justify-between">
             <div className="text-sky-500 text-2xl">
               <FaHandshake />
@@ -90,7 +90,7 @@ const TopCards = ({ tasks }) => {
 
 
         {/* Clients */}
-        <div className=" shadow-lg p-4 rounded-xl">
+        <div className=" shadow-lg p-4 rounded-xl border border-gray-200">
           <div className="flex items-center justify-between">
             <div className="text-purple-500 text-2xl">
               <FaUser />

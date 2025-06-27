@@ -8,7 +8,7 @@ const DhashBoardHome = () => {
   return (
     <div>
       <TopCards tasks={tasks}></TopCards>
-      <ChartCard></ChartCard>
+      <ChartCard tasks={tasks}></ChartCard>
     </div>
   );
 };

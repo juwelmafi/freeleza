@@ -22,7 +22,7 @@ const DashBoard = () => {
           {/* Toggle Button */}
           <button
             onClick={() => setSidebarOpen(!isSidebarOpen)}
-            className="lg:hidden text-2xl text-gray-600 mb-4"
+            className="lg:hidden text-2xl mb-4"
           >
             <FaBars />
           </button>
